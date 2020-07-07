@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014871c5dea43d247966d94966ad7697, type: 3}
+  m_Name: red-box
+  m_EditorClassIdentifier: 
+  name: red
+  type: box
+  answer: 4
+  actionObject: {fileID: 6052583590799016321, guid: 7a12ad55525dbb5479208cacb27c827d,
+    type: 3}

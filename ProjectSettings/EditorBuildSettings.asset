@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameMenu.unity
     guid: 6ef881f65fa8fa24fb3c119f3404d590
+  - enabled: 1
+    path: Assets/Scenes/Pola-1.unity
+    guid: 03c5648cace00034aa055a8db297125c
+  - enabled: 1
+    path: Assets/Scenes/Pola-2.unity
+    guid: 6635ac7bb04406e48ad8468d3ce8c5f7
+  - enabled: 1
+    path: Assets/Scenes/Pola-3.unity
+    guid: ac3e58f30ce68e7409f3004d85c67bc6
   m_configObjects: {}
