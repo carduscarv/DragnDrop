@@ -23,4 +23,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pola-3.unity
     guid: ac3e58f30ce68e7409f3004d85c67bc6
+  - enabled: 1
+    path: Assets/Scenes/Algoritma-1.unity
+    guid: 40b78c248c15fee4497ffdde81618fcf
+  - enabled: 1
+    path: Assets/Scenes/Algoritma-2.unity
+    guid: 66b26b23a8589af4c87f12ca5730ee08
+  - enabled: 1
+    path: Assets/Scenes/Algoritma-3.unity
+    guid: a873f03bb912cba4f87a9da61c4617da
+  - enabled: 1
+    path: Assets/Scenes/Dekomposisi-2.unity
+    guid: 425ffcba29fd24e418285bfdd5ebdff6
+  - enabled: 1
+    path: Assets/Scenes/Dekomposisi-1.unity
+    guid: 622ad6d40bea1cc4f9040e07c7c3705d
   m_configObjects: {}

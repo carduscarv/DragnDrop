@@ -16,11 +16,13 @@ public class BoxPool : MonoBehaviour
     // Object gambar & warna yang diubah saat resource aksi memasuki wilayah pool
     private Image colors;  
     private Color imageColorToBeUsed;
-    // 
-    // private Point movePoint;
+    
+    private string _title;
+
+    private string _rightAnswer;
 
     // Button referensi move dan reset
-    public Button movesBtn;
+    public Button jawabBtn;
     public Button resetBtn;
 
     public GameObject panelPopup;
@@ -36,27 +38,35 @@ public class BoxPool : MonoBehaviour
         colors = GetComponent<Image>();
         // movePoint = new Point(0, 0);
         // buat event listener untuk button move dan reset
-        movesBtn.onClick.AddListener(CheckMoves);
+        jawabBtn.onClick.AddListener(CheckMoves);
         resetBtn.onClick.AddListener(ResetMoves);
         panelPopup.SetActive(false);
+
+        _title = GameObject.FindGameObjectWithTag("Player").GetComponent<Text>().text;
+        if(_title == "Algoritma-1"){
+            _rightAnswer = "1234567";
+        }else{
+            _rightAnswer = "1234";
+        }
     }
 
     // Fungsi saat button moves dipanggil, check apakah ada gerakan didalam pool
     private void CheckMoves(){
         string answer = "";
-        if(boxList.Count == 4){
+        if(boxList.Count == gameObject.transform.childCount-1){
             for (int i = 0; i < boxList.Count; i++)
             {
                 answer = answer + boxList[i].answer;
             }
-            panelPopup.SetActive(true);
-            if(answer == "1234"){
+            
+            if(answer == _rightAnswer){
                 Debug.Log("Jawaban benar");
                 textPopup.text = "Jawaban Anda Benar!";
             }else{
                 Debug.Log("Jawaban salah");
                 textPopup.text = "Jawaban Anda Salah!";
             }
+            panelPopup.SetActive(true);
         }else{
             Debug.Log("Pindahkan semua kotak");
             ResetMoves();
@@ -65,7 +75,7 @@ public class BoxPool : MonoBehaviour
 
     // Logic memasukan resource gerakan kedalam pool, terutama bagian looping
     public void SetToPool(ResultResources moves){
-        if(_count < 3){
+        if(_count < gameObject.transform.childCount-2){
             _count++;
             boxList.Add(moves);
 
